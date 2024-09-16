@@ -69,6 +69,80 @@
             width: 100%;
             height: 100%;
         }
+
+        .button1 {
+            padding: 0.8em 1.8em;
+            border: 2px solid #3B82F6;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: .3s;
+            z-index: 1;
+            font-family: inherit;
+            color: #fff;
+        }
+        .button2 {
+            padding: 0.8em 1.8em;
+            border: 2px solid #3B82F6;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: .3s;
+            z-index: 1;
+            font-family: inherit;
+            color: #000000;
+        }
+
+        .button1::before {
+            content: '';
+            width: 0;
+            height: 300%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: #3B82F6;
+            transition: .5s ease;
+            display: block;
+            z-index: -1;
+            color: black;
+        }
+
+        .button1:hover::before {
+            width: 105%;
+        }
+
+        .button1:hover {
+            color: #111;
+        }
+        .button2::before {
+            content: '';
+            width: 0;
+            height: 300%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: #3B82F6;
+            transition: .5s ease;
+            display: block;
+            z-index: -1;
+            color: black;
+        }
+
+        .button2:hover::before {
+            width: 105%;
+        }
+
+        .button2:hover {
+            color: #111;
+        }
     </style>
 </head>
 
@@ -80,7 +154,7 @@
         <div class="container mx-auto flex justify-between items-center px-6">
             <!-- Logo -->
             <a class="text-lg font-bold" href="#">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="h-12">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12">
             </a>
 
             <!-- Desktop Menu -->
@@ -116,36 +190,35 @@
     <div class="relative w-full h-screen overflow-hidden">
         <!-- Slides -->
         <div class="carousel-slide absolute inset-0 hidden">
-            <div class="carousel-image"
-                style="background-image: url('https://www.feedough.com/wp-content/uploads/2020/08/what-is-marketing.png');">
+            <div class="carousel-image" style="background-image: url('images/hero1.jpg');">
             </div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="carousel-text text-center">
                     <h1 class="text-white text-4xl font-bold">WELCOME TO OUR COLLEGE</h1>
                     <a href="#contact-section"
-                        class="btn-primary bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
+                        class="button1 bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
                         Touch</a>
                 </div>
             </div>
         </div>
         <div class="carousel-slide absolute inset-0 hidden">
-            <div class="carousel-image" style="background-image: url('https://example.com/image2.jpg');"></div>
+            <div class="carousel-image" style="background-image: url('images/hero2.jpg');"></div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="carousel-text text-center">
                     <h1 class="text-white text-4xl font-bold">JOIN OUR INITIATIVES</h1>
                     <a href="#contact-section"
-                        class="btn-primary bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
+                        class="button1 bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
                         Touch</a>
                 </div>
             </div>
         </div>
         <div class="carousel-slide absolute inset-0 hidden">
-            <div class="carousel-image" style="background-image: url('https://example.com/image3.jpg');"></div>
+            <div class="carousel-image" style="background-image: url('images/hero3.jpg');"></div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="carousel-text text-center">
                     <h1 class="text-white text-4xl font-bold">EXPLORE OUR CAMPUS</h1>
                     <a href="#contact-section"
-                        class="btn-primary bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
+                        class="button1 bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
                         Touch</a>
                 </div>
             </div>
@@ -177,26 +250,25 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Image Section -->
             <div class="flex items-center justify-center">
-                <img src="images/about.webp" alt="About Us Image" class="rounded-lg shadow-lg">
+                <img src="images/about.jpeg" alt="About Us Image" class="rounded-lg shadow-lg">
             </div>
             <!-- Text Section -->
             <div class="flex flex-col justify-center my-2">
                 <h3 class="text-3xl font-semibold text-blue-500 mb-4">Who We Are</h3>
-                <p class="text-lg text-gray-600 mb-4">The College Marketing Society is a dedicated team of students and
-                    professionals passionate about the power of marketing. We believe in creating innovative strategies
-                    that help businesses, both small and large, reach their potential through modern and effective
-                    marketing techniques.</p>
-                <h3 class="text-3xl font-semibold text-blue-500 mb-4">Our Mission</h3>
+                <p class="text-lg text-gray-600 mb-4 text-justify">A forward-thinking youth-led company, META KNIGHT MEDIA, is committed to helping conventional small businesses, organizations, and student leaders succeed in the digital era. Our goal is to close the digital divide by offering cutting-edge social media solutions, knowledgeable advice, and customized tactics to support our clients' success on the internet.<br>
+
+                    <!-- Success in the digital era of today depends on having a good web presence. To make a difference, student leaders and groups must develop their brands, communicate with their audience more effectively, and spread their message. Establishing a strong online presence is essential for traditional small businesses to attract new clients and compete with larger enterprises. -->
+                    </p>
+                <!-- <h3 class="text-3xl font-semibold text-blue-500 mb-4">Our Mission</h3>
                 <p class="text-lg text-gray-600 mb-4">Our mission is to bridge the gap between theoretical marketing
                     concepts and practical applications. We provide real-world experience to our members while
-                    delivering top-notch marketing solutions to the community.</p>
+                    delivering top-notch marketing solutions to the community.</p> -->
                 <h3 class="text-3xl font-semibold text-blue-500 mb-4">What We Offer</h3>
-                <p class="text-lg text-gray-600">We offer a wide range of services, from social media management to
-                    full-fledged marketing campaigns. Our team is equipped with the latest tools and knowledge to ensure
-                    your business stands out in a crowded marketplace.</p>
-                <button
-                    class="mt-4 bg-blue-500 text-white  font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 inline-block">Read
-                    More</button>
+                <p class="text-lg text-gray-600 text-justify">Offering a wide range of services, such as social media planning, digital marketing, content production, and online reputation management, Meta Knight Media meets these needs. In order to provide tailored solutions that actually produce results, our team of professionals works closely with customers to understand their specific needs, objectives, and target audience.
+                </p>
+                <button class="mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 inline-block">
+                    <a href="about.html">Read More</a>
+                </button>
             </div>
         </div>
 
@@ -206,7 +278,7 @@
     <!-- Digital Marketing Services Section -->
     <!-- Digital Marketing Services Section -->
     <div id="services-section" class="container relative mx-auto my-16 text-center">
-        
+
         <!-- Section Heading -->
         <h2 class="text-4xl font-bold">Our <span class="text-blue-500">Digital Marketing Services</span></h2>
         <p class="text-lg text-gray-600">Your Instruments</p>
@@ -227,10 +299,9 @@
             <div
                 class="service-card bg-white shadow-lg p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white">
                 <img src="images/phone.svg" alt="Performance Marketing" class="mx-auto mb-4 h-12">
-                <h5 class="font-semibold text-lg text-blue-500 transition-colors duration-300">Performance Marketing
+                <h5 class="font-semibold text-lg text-blue-500 transition-colors duration-300">Web Developement
                 </h5>
-                <p class="text-gray-600 mt-2 transition-colors duration-300">Optimize your ad spend with data-driven
-                    marketing campaigns.</p>
+                <p class="text-gray-600 mt-2 transition-colors duration-300">Build modern, responsive websites and applications tailored to your business needs.</p>
             </div>
 
             <!-- SEO -->
@@ -253,13 +324,12 @@
             </div>
 
             <!-- Mobile App Marketing -->
-            <div
-                class="service-card bg-white shadow-lg p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white">
-                <img src="images/phone.svg" alt="Mobile App Marketing" class="mx-auto mb-4 h-12">
-                <h5 class="font-semibold text-lg text-blue-500 transition-colors duration-300">Mobile App Marketing</h5>
-                <p class="text-gray-600 mt-2 transition-colors duration-300">Boost your app’s downloads and user
-                    engagement with smart marketing tactics.</p>
+            <div class="service-card bg-white shadow-lg p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white">
+                <img src="images/phone.svg" alt="Content Creation" class="mx-auto mb-4 h-12">
+                <h5 class="font-semibold text-lg text-blue-500 transition-colors duration-300">Content Creation</h5>
+                <p class="text-gray-600 mt-2 transition-colors duration-300">Engage your audience with high-quality, creative content that drives results and enhances your brand's presence.</p>
             </div>
+            
 
             <!-- Content Marketing -->
             <div
@@ -297,36 +367,36 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <!-- Client Logo 1 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 1 Logo" class="h-20">
+                <img src="images/client1amit.jpeg" alt="Client 1 Logo" class="h-20">
             </div>
             <!-- Client Logo 2 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 2 Logo" class="h-20">
+                <img src="images/client2.jpeg" alt="Client 2 Logo" class="h-20">
             </div>
             <!-- Client Logo 3 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 3 Logo" class="h-20">
+                <img src="images/client3.jpeg" alt="Client 3 Logo" class="h-20">
             </div>
             <!-- Client Logo 4 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 4 Logo" class="h-20">
+                <img src="images/client 4.jpeg" alt="Client 4 Logo" class="h-20">
             </div>
             <!-- Additional Clients if needed -->
             <!-- Client Logo 5 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 5 Logo" class="h-20">
+                <img src="images/client5.jpeg" alt="Client 5 Logo" class="h-20">
             </div>
             <!-- Client Logo 6 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 6 Logo" class="h-20">
+                <img src="images/client6.jpeg" alt="Client 6 Logo" class="h-20">
             </div>
             <!-- Client Logo 7 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 7 Logo" class="h-20">
+                <img src="images/client7.jpeg" alt="Client 7 Logo" class="h-20">
             </div>
             <!-- Client Logo 8 -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/150" alt="Client 8 Logo" class="h-20">
+                <img src="images/client8.jpeg" alt="Client 8 Logo" class="h-20">
             </div>
         </div>
     </div>
@@ -338,7 +408,7 @@
     <div class="container relative mx-auto my-16">
         <img src="images/dots.svg" class="absolute left-0 w-10 md:w-auto" alt="">
         <img src="images/dots.svg" class="absolute right-0 top-1/3  w-10 md:w-auto" alt="">
-        
+
         <h2 class="text-4xl font-bold text-center mb-8">Frequently Asked <span class="text-blue-500">Questions</span>
         </h2>
         <div class="flex justify-center items-start">
@@ -347,7 +417,7 @@
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
                         <h2 @click="open = !open"
                             class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
-                            <span>When will my order arrive?</span>
+                            <span>Why do you want to build a website for your business?</span>
                             <svg :class="{'transform rotate-180': open}"
                                 class="fill-current text-blue-500 h-6 w-6 transition-transform duration-500"
                                 viewBox="0 0 20 20">
@@ -358,15 +428,13 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">Shipping time is set by our delivery partners, according to the
-                                delivery method chosen by you. Additional details can be found in the order
-                                confirmation.</p>
+                            <p class="p-3 text-gray-900">A website serves as your business's digital storefront, providing a platform to showcase your products or services, connect with potential customers, and establish credibility. It allows you to reach a wider audience, provide valuable information, and ultimately drive sales and growth.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
                         <h2 @click="open = !open"
                             class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
-                            <span>When will my order arrive?</span>
+                            <span>What is meant by digital presence?</span>
                             <svg :class="{'transform rotate-180': open}"
                                 class="fill-current text-blue-500 h-6 w-6 transition-transform duration-500"
                                 viewBox="0 0 20 20">
@@ -377,15 +445,13 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">Shipping time is set by our delivery partners, according to the
-                                delivery method chosen by you. Additional details can be found in the order
-                                confirmation.</p>
+                            <p class="p-3 text-gray-900">Your digital presence encompasses all your online activities and interactions, including your website, social media profiles, online reviews, and any other digital content associated with your business. It's how your brand is perceived and experienced in the online world.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
                         <h2 @click="open = !open"
                             class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
-                            <span>When will my order arrive?</span>
+                            <span>How could we provide more value than the market?</span>
                             <svg :class="{'transform rotate-180': open}"
                                 class="fill-current text-blue-500 h-6 w-6 transition-transform duration-500"
                                 viewBox="0 0 20 20">
@@ -396,15 +462,19 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">Shipping time is set by our delivery partners, according to the
-                                delivery method chosen by you. Additional details can be found in the order
-                                confirmation.</p>
+                            <p class="p-3 text-gray-900">To differentiate yourself from competitors and offer superior value, consider the following strategies:
+
+                                Niche Expertise: Focus on a specific area of your industry and become a recognized expert. This allows you to cater to a targeted audience with specialized knowledge and solutions.
+                                Personalized Service: Provide personalized attention and support to your customers, building strong relationships and fostering loyalty.
+                                Innovative Solutions: Continuously seek out innovative ways to improve your products or services, addressing customer needs and pain points in unique ways.
+                                Exceptional Customer Experience: Prioritize creating a seamless and positive customer experience across all touchpoints, from your website to customer service interactions.
+                                Strong Online Community: Engage with your audience through social media and online forums, building a community around your brand and fostering customer loyalty.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
                         <h2 @click="open = !open"
                             class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
-                            <span>When will my order arrive?</span>
+                            <span>How long does it take to build a website?</span>
                             <svg :class="{'transform rotate-180': open}"
                                 class="fill-current text-blue-500 h-6 w-6 transition-transform duration-500"
                                 viewBox="0 0 20 20">
@@ -415,15 +485,13 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">Shipping time is set by our delivery partners, according to the
-                                delivery method chosen by you. Additional details can be found in the order
-                                confirmation.</p>
+                            <p class="p-3 text-gray-900">The timeline for building a website depends on several factors, including the complexity of the design, the amount of content, and the chosen development method. Generally, a simple website can be built in a few weeks, while more complex websites may take several months.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
                         <h2 @click="open = !open"
                             class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
-                            <span>When will my order arrive?</span>
+                            <span>How can we maintain your website?</span>
                             <svg :class="{'transform rotate-180': open}"
                                 class="fill-current text-blue-500 h-6 w-6 transition-transform duration-500"
                                 viewBox="0 0 20 20">
@@ -434,9 +502,7 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">Shipping time is set by our delivery partners, according to the
-                                delivery method chosen by you. Additional details can be found in the order
-                                confirmation.</p>
+                            <p class="p-3 text-gray-900">To maintain a successful website, regularly update content, address technical issues, ensure security, monitor analytics, and prioritize user experience.</p>
                         </div>
                     </li>
                     <!-- Add more FAQ items as needed -->
@@ -492,8 +558,10 @@
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-32 resize-none"
                         id="message" placeholder="Your Message" required></textarea>
                     <div class="flex justify-center ">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-                            type="submit">Send Message</button>
+                        <button  class="bg-blue-500  button2  hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded mt-4"
+                            type="submit">
+                            Send Message
+                        </button>
                     </div>
                 </div>
 
@@ -517,48 +585,51 @@
     </div>
 
     <footer class="bg-blue-500 text-white py-10">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 lg:px-16 space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
-        
-        <!-- Logo and Slogan -->
-        <div class="flex items-center">
-            <img src="https://via.placeholder.com/50" alt="Logo" class="h-12 mr-4">
-            <span class="text-2xl font-bold">Ready To Talk Growth.</span>
-        </div>
+        <div
+            class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 lg:px-16 space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
 
-        <!-- Navigation and Contact Info -->
-        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
-            <div class="flex flex-col space-y-2">
-                <a href="#" class="hover:text-gray-300 transition duration-300">Home</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">Team</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">Services</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">Our Clients</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">Faq</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">Contact</a>
+            <!-- Logo and Slogan -->
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50" alt="Logo" class="h-12 mr-4">
+                <span class="text-2xl font-bold">Ready To Talk Growth.</span>
             </div>
-            <div class="flex flex-col space-y-2">
-                <div class="flex items-center">
-                    <i class="fas fa-phone-alt mr-2"></i>
-                    <a href="tel:+4407772452848" class="hover:text-gray-300 transition duration-300">+44 07772452848</a>
+
+            <!-- Navigation and Contact Info -->
+            <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
+                <div class="flex flex-col space-y-2">
+                    <a href="#" class="hover:text-gray-300 transition duration-300">Home</a>
+                    <a href="#" class="hover:text-gray-300 transition duration-300">Team</a>
+                    <a href="#" class="hover:text-gray-300 transition duration-300">Services</a>
+                    <a href="#" class="hover:text-gray-300 transition duration-300">Our Clients</a>
+                    <a href="#" class="hover:text-gray-300 transition duration-300">Faq</a>
+                    <a href="#" class="hover:text-gray-300 transition duration-300">Contact</a>
                 </div>
-                <div class="flex items-center">
-                    <i class="fas fa-envelope mr-2"></i>
-                    <a href="mailto:info@marketingagency.co" class="hover:text-gray-300 transition duration-300">info@marketingagency.co</a>
-                </div>
-                <div class="flex space-x-4 mt-4">
-                    <a href="#" class="hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                <div class="flex flex-col space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <a href="tel:+4407772452848" class="hover:text-gray-300 transition duration-300">+44
+                            07772452848</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:info@marketingagency.co"
+                            class="hover:text-gray-300 transition duration-300">info@marketingagency.co</a>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="hover:text-gray-300 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="hover:text-gray-300 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="hover:text-gray-300 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 

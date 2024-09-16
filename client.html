@@ -1,79 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clients - College Marketing Society</title>
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <style>
-        @keyframes slide {
-            0% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
+      @keyframes slide {
+        0% {
+          transform: translateX(100%);
         }
 
-        .logo-slider {
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            padding-top: 8px;
+        100% {
+          transform: translateX(-100%);
         }
+      }
 
-        .logos-slide {
-            @apply flex;
-            animation: slide 45s linear infinite;
-        }
+      .logo-slider {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        padding-top: 8px;
+      }
+
+      .logos-slide {
+        @apply flex;
+        animation: slide 45s linear infinite;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-gray-100 text-gray-700">
-
+  <body class="bg-gray-100 text-gray-700">
     <!-- Navbar -->
     <nav class="bg-white shadow-sm py-4 px-2 md:px-10">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <!-- Logo -->
-            <a class="text-lg font-bold" href="#">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="h-12">
-            </a>
+      <div class="container mx-auto flex justify-between items-center px-6">
+        <!-- Logo -->
+        <a class="text-lg font-bold" href="#">
+          <img src="https://via.placeholder.com/50" alt="Logo" class="h-12" />
+        </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6">
-                <a class="text-gray-700 hover:text-blue-500" href="index.html">Home</a>
-                <a class="text-gray-700 hover:text-blue-500" href="about.html">About Us</a>
-                <a class="text-gray-700 hover:text-blue-500" href="#services-section">Services</a>
-                <a class="text-gray-700 hover:text-blue-500" href="clients.html">Clients</a>
-                <a class="text-gray-700 hover:text-blue-500" href="#contact-section">Contact Us</a>
-            </div>
-
-            <!-- Hamburger Icon (Mobile) -->
-            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+          <a class="text-gray-700 hover:text-blue-500" href="/index.html"
+            >Home</a
+          >
+          <a class="text-gray-700 hover:text-blue-500" href="/about.html"
+            >About Us</a
+          >
+          <a class="text-gray-700 hover:text-blue-500" href="#services-section"
+            >Services</a
+          >
+          <a class="text-gray-700 hover:text-blue-500" href="/clients.html"
+            >Clients</a
+          >
+          <a class="text-gray-700 hover:text-blue-500" href="#contact-section"
+            >Contact Us</a
+          >
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-nav" class="md:hidden hidden px-6">
-            <a class="block py-2 text-gray-700 hover:text-blue-500" href="index.html">Home</a>
-            <a class="block py-2 text-gray-700 hover:text-blue-500" href="about.html">About Us</a>
-            <a class="block py-2 text-gray-700 hover:text-blue-500" href="#services-section">Services</a>
-            <a class="block py-2 text-gray-700 hover:text-blue-500" href="clients.html">Clients</a>
-            <a class="block py-2 text-gray-700 hover:text-blue-500" href="#contact-section">Contact Us</a>
-        </div>
+        <!-- Hamburger Icon (Mobile) -->
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-nav" class="md:hidden hidden px-6">
+        <a
+          class="block py-2 text-gray-700 hover:text-blue-500"
+          href="/index.html"
+          >Home</a
+        >
+        <a
+          class="block py-2 text-gray-700 hover:text-blue-500"
+          href="/about.html"
+          >About Us</a
+        >
+        <a
+          class="block py-2 text-gray-700 hover:text-blue-500"
+          href="#services-section"
+          >Services</a
+        >
+        <a
+          class="block py-2 text-gray-700 hover:text-blue-500"
+          href="/clients.html"
+          >Clients</a
+        >
+        <a
+          class="block py-2 text-gray-700 hover:text-blue-500"
+          href="#contact-section"
+          >Contact Us</a
+        >
+      </div>
     </nav>
 
     <section class="py-12">
-        <div class="container mx-auto">
-            <!-- Floating Logos Section -->
-            <div class="logo-slider">
+      <div class="container">
+        <!-- Floating Logos Section -->
+        <!-- <div class="logo-slider">
                 <div class="logos-slide">
                     <img src="https://i.ibb.co/Vv5rkDK/api-partner-verzon.png" alt="Client Logo 1" class="w-40 h-20 mx-2">
                     <img src="https://i.ibb.co/J399KDg/api-partner-netflix.png" alt="Client Logo 2" class="w-40 h-20 mx-2">
@@ -82,145 +123,268 @@
                     <img src="https://i.ibb.co/hMSJ1sg/api-partner-ring.png" alt="Client Logo 5" class="w-40 h-20 mx-2">
                     <img src="https://i.ibb.co/4RWQcMS/api-partner-nespresso.png" alt="Client Logo 6" class="w-40 h-20 mx-2">
                 </div>
-            </div>
+            </div> -->
+        <style>
+          .client-logos {
+            display: flex;
+            overflow-x: hidden; /* Hide overflowing content */
+            width: fit-content; /* Adjust width as needed */
+            animation: scroll-logos 20s linear infinite; /* Animation details */
+          }
+
+          .client-logos div {
+            /* Inner container for positioning */
+            display: flex;
+            animation: scroll-logos-inner calc(20s / number of logos) linear
+              infinite reverse; /* Adjust animation duration based on number of logos */
+          }
+
+          @keyframes scroll-logos {
+            0% {
+              transform: translateX(200%);
+            }
+            100% {
+              transform: translateX(-100%);
+            } /* Adjust for desired scrolling distance */
+          }
+
+          @keyframes scroll-logos-inner {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(100% + (number of logos) * spacing));
+            } /* Adjust for spacing between logos */
+          }
+        </style>
+        <div class="client-logos">
+          <div>
+            <img
+              src="https://i.ibb.co/Vv5rkDK/api-partner-verzon.png"
+              alt="Client Logo 1"
+              class="w-40 h-20 mx-2"
+            />
+            <img
+              src="https://i.ibb.co/J399KDg/api-partner-netflix.png"
+              alt="Client Logo 2"
+              class="w-40 h-20 mx-2"
+            />
+            <img
+              src="https://i.ibb.co/TKT0F5L/api-partner-yelp.png"
+              alt="Client Logo 3"
+              class="w-40 h-20 mx-2"
+            />
+            <img
+              src="https://i.ibb.co/HG6KR89/api-partner-adobe.png"
+              alt="Client Logo 4"
+              class="w-40 h-20 mx-2"
+            />
+            <img
+              src="https://i.ibb.co/hMSJ1sg/api-partner-ring.png"
+              alt="Client Logo 5"
+              class="w-40 h-20 mx-2"
+            />
+            <img
+              src="https://i.ibb.co/4RWQcMS/api-partner-nespresso.png"
+              alt="Client Logo 6"
+              class="w-40 h-20 mx-2"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-blue-700 text-black relative p-12 text-center mx-4 my-2 rounded-2xl">
-        <div class="container mx-auto">
-            <div class="blockquote-section">
-                <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden active">
-                    <p>“This is the first testimonial.”</p>
-                    <cite class="block mt-4 text-xl font-bold">&mdash; John Doe<br><em class="text-base font-normal">CEO, Company A</em></cite>
-                </blockquote>
+    <section
+      class="bg-blue-700 text-white relative p-12 text-center mx-4 my-2 rounded-2xl"
+    >
+      <div class="container mx-auto">
+        <div class="blockquote-section">
+          <blockquote
+            class="text-3xl leading-relaxed mx-auto max-w-3xl hidden active"
+          >
+            <p>“This is the first testimonial.”</p>
+            <cite class="block mt-4 text-xl font-bold"
+              >&mdash; John Doe<br /><em class="text-base font-normal"
+                >CEO, Company A</em
+              ></cite
+            >
+          </blockquote>
 
-                <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden">
-                    <p>“This is the second testimonial.”</p>
-                    <cite class="block mt-4 text-xl font-bold">&mdash; Jane Smith<br><em class="text-base font-normal">Marketing Head, Company B</em></cite>
-                </blockquote>
+          <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden">
+            <p>“This is the second testimonial.”</p>
+            <cite class="block mt-4 text-xl font-bold"
+              >&mdash; Jane Smith<br /><em class="text-base font-normal"
+                >Marketing Head, Company B</em
+              ></cite
+            >
+          </blockquote>
 
-                <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden">
-                    <p>“This is the third testimonial.”</p>
-                    <cite class="block mt-4 text-xl font-bold">&mdash; Mike Johnson<br><em class="text-base font-normal">CTO, Company C</em></cite>
-                </blockquote>
+          <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden">
+            <p>“This is the third testimonial.”</p>
+            <cite class="block mt-4 text-xl font-bold"
+              >&mdash; Mike Johnson<br /><em class="text-base font-normal"
+                >CTO, Company C</em
+              ></cite
+            >
+          </blockquote>
 
-                <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden">
-                    <p>“This is the fourth testimonial.”</p>
-                    <cite class="block mt-4 text-xl font-bold">&mdash; Emily Davis<br><em class="text-base font-normal">COO, Company D</em></cite>
-                </blockquote>
-            </div>
-
-            <!-- Arrow navigation -->
-            <div class="absolute top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer left-4" id="prev-arrow">
-                &#10094;
-            </div>
-            <div class="absolute top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer right-4" id="next-arrow">
-                &#10095;
-            </div>
+          <blockquote class="text-3xl leading-relaxed mx-auto max-w-3xl hidden">
+            <p>“This is the fourth testimonial.”</p>
+            <cite class="block mt-4 text-xl font-bold"
+              >&mdash; Emily Davis<br /><em class="text-base font-normal"
+                >COO, Company D</em
+              ></cite
+            >
+          </blockquote>
         </div>
+
+        <!-- Arrow navigation -->
+        <div
+          class="absolute top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer left-4"
+          id="prev-arrow"
+        >
+          &#10094;
+        </div>
+        <div
+          class="absolute top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer right-4"
+          id="next-arrow"
+        >
+          &#10095;
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-blue-500 text-white py-10">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 lg:px-16 space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
-            
-            <!-- Logo and Slogan -->
-            <div class="flex items-center">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="h-12 mr-4">
-                <span class="text-2xl font-bold">Ready To Talk Growth.</span>
-            </div>
-    
-            <!-- Navigation and Contact Info -->
-            <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
-                <div class="flex flex-col space-y-2">
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Home</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Team</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Services</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Our Clients</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Faq</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Contact</a>
-                </div>
-                <div class="flex flex-col space-y-2">
-                    <div class="flex items-center">
-                        <i class="fas fa-phone-alt mr-2"></i>
-                        <a href="tel:+4407772452848" class="hover:text-gray-300 transition duration-300">+44 07772452848</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope mr-2"></i>
-                        <a href="mailto:info@marketingagency.co" class="hover:text-gray-300 transition duration-300">info@marketingagency.co</a>
-                    </div>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="hover:text-gray-300 transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="hover:text-gray-300 transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="hover:text-gray-300 transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 lg:px-16 space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16"
+      >
+        <!-- Logo and Slogan -->
+        <div class="flex items-center">
+          <img
+            src="https://via.placeholder.com/50"
+            alt="Logo"
+            class="h-12 mr-4"
+          />
+          <span class="text-2xl font-bold">Ready To Talk Growth.</span>
         </div>
+
+        <!-- Navigation and Contact Info -->
+        <div
+          class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16"
+        >
+          <div class="flex flex-col space-y-2">
+            <a href="#" class="hover:text-gray-300 transition duration-300"
+              >Home</a
+            >
+            <a href="#" class="hover:text-gray-300 transition duration-300"
+              >Team</a
+            >
+            <a href="#" class="hover:text-gray-300 transition duration-300"
+              >Services</a
+            >
+            <a href="#" class="hover:text-gray-300 transition duration-300"
+              >Our Clients</a
+            >
+            <a href="#" class="hover:text-gray-300 transition duration-300"
+              >Faq</a
+            >
+            <a href="#" class="hover:text-gray-300 transition duration-300"
+              >Contact</a
+            >
+          </div>
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <i class="fas fa-phone-alt mr-2"></i>
+              <a
+                href="tel:+4407772452848"
+                class="hover:text-gray-300 transition duration-300"
+                >+44 07772452848</a
+              >
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <a
+                href="mailto:info@marketingagency.co"
+                class="hover:text-gray-300 transition duration-300"
+                >info@marketingagency.co</a
+              >
+            </div>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="hover:text-gray-300 transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="hover:text-gray-300 transition duration-300">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="hover:text-gray-300 transition duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script>
-        function rotateTestimonials() {
-            const blockquoteElements = document.querySelectorAll('.blockquote-section blockquote');
-            let currentIndex = 0;
-            let intervalId;
-            const rotationSpeed = 4000; // 4 seconds per testimonial
+      function rotateTestimonials() {
+        const blockquoteElements = document.querySelectorAll(
+          ".blockquote-section blockquote"
+        );
+        let currentIndex = 0;
+        let intervalId;
+        const rotationSpeed = 4000; // 4 seconds per testimonial
 
-            function showQuote(index) {
-                blockquoteElements[currentIndex].classList.remove('block');
-                blockquoteElements[currentIndex].classList.add('hidden');
-                currentIndex = index;
-                blockquoteElements[currentIndex].classList.remove('hidden');
-                blockquoteElements[currentIndex].classList.add('block');
-            }
-
-            function showNextQuote() {
-                const nextIndex = (currentIndex + 1) % blockquoteElements.length;
-                showQuote(nextIndex);
-            }
-
-            function showPreviousQuote() {
-                const prevIndex = (currentIndex - 1 + blockquoteElements.length) % blockquoteElements.length;
-                showQuote(prevIndex);
-            }
-
-            // Start the rotation
-            function startRotation() {
-                intervalId = setInterval(() => {
-                    showNextQuote();
-                }, rotationSpeed);
-            }
-
-            // Stop the rotation
-            function stopRotation() {
-                clearInterval(intervalId);
-            }
-
-            // Arrow navigation event listeners
-            document.getElementById('prev-arrow').addEventListener('click', () => {
-                stopRotation();
-                showPreviousQuote();
-                startRotation();
-            });
-
-            document.getElementById('next-arrow').addEventListener('click', () => {
-                stopRotation();
-                showNextQuote();
-                startRotation();
-            });
-
-            startRotation(); // Start rotating testimonials initially
+        function showQuote(index) {
+          blockquoteElements[currentIndex].classList.remove("block");
+          blockquoteElements[currentIndex].classList.add("hidden");
+          currentIndex = index;
+          blockquoteElements[currentIndex].classList.remove("hidden");
+          blockquoteElements[currentIndex].classList.add("block");
         }
 
-        rotateTestimonials();
-    </script>
-</body>
+        function showNextQuote() {
+          const nextIndex = (currentIndex + 1) % blockquoteElements.length;
+          showQuote(nextIndex);
+        }
 
+        function showPreviousQuote() {
+          const prevIndex =
+            (currentIndex - 1 + blockquoteElements.length) %
+            blockquoteElements.length;
+          showQuote(prevIndex);
+        }
+
+        // Start the rotation
+        function startRotation() {
+          intervalId = setInterval(() => {
+            showNextQuote();
+          }, rotationSpeed);
+        }
+
+        // Stop the rotation
+        function stopRotation() {
+          clearInterval(intervalId);
+        }
+
+        // Arrow navigation event listeners
+        document.getElementById("prev-arrow").addEventListener("click", () => {
+          stopRotation();
+          showPreviousQuote();
+          startRotation();
+        });
+
+        document.getElementById("next-arrow").addEventListener("click", () => {
+          stopRotation();
+          showNextQuote();
+          startRotation();
+        });
+
+        startRotation(); // Start rotating testimonials initially
+      }
+
+      rotateTestimonials();
+    </script>
+  </body>
 </html>
