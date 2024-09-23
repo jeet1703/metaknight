@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Marketing Society</title>
+    <title>Metaknight Media</title>
     <!-- Tailwind CSS CDN -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script defer>
         function toggleMenu() {
             const nav = document.getElementById('mobile-nav');
@@ -84,6 +87,7 @@
             font-family: inherit;
             color: #fff;
         }
+
         .button2 {
             padding: 0.8em 1.8em;
             border: 2px solid #3B82F6;
@@ -121,6 +125,7 @@
         .button1:hover {
             color: #111;
         }
+
         .button2::before {
             content: '';
             width: 0;
@@ -154,7 +159,7 @@
         <div class="container mx-auto flex justify-between items-center px-6">
             <!-- Logo -->
             <a class="text-lg font-bold" href="#">
-                <img src="images/logo.jpeg" alt="Logo" class="h-12">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12 rounded-full ">
             </a>
 
             <!-- Desktop Menu -->
@@ -190,11 +195,11 @@
     <div class="relative w-full h-screen overflow-hidden">
         <!-- Slides -->
         <div class="carousel-slide absolute inset-0 hidden">
-            <div class="carousel-image" style="background-image: url('images/hero1.jpg');">
+            <div class="carousel-image" style="background-image: url('images/poster1.jpeg');">
             </div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="carousel-text text-center">
-                    <h1 class="text-white text-4xl font-bold">WELCOME TO OUR COLLEGE</h1>
+                    <h1 class="text-white text-4xl font-bold">WELCOME TO OUR WEBSITE</h1>
                     <a href="#contact-section"
                         class="button1 bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
                         Touch</a>
@@ -202,7 +207,7 @@
             </div>
         </div>
         <div class="carousel-slide absolute inset-0 hidden">
-            <div class="carousel-image" style="background-image: url('images/hero2.jpg');"></div>
+            <div class="carousel-image" style="background-image: url('images/poster2.jpeg');"></div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="carousel-text text-center">
                     <h1 class="text-white text-4xl font-bold">JOIN OUR INITIATIVES</h1>
@@ -213,10 +218,10 @@
             </div>
         </div>
         <div class="carousel-slide absolute inset-0 hidden">
-            <div class="carousel-image" style="background-image: url('images/hero3.jpg');"></div>
+            <div class="carousel-image" style="background-image: url('images/poster3.jpeg');"></div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="carousel-text text-center">
-                    <h1 class="text-white text-4xl font-bold">EXPLORE OUR CAMPUS</h1>
+                    <h1 class="text-white text-4xl font-bold">EXPLORE OUR SERVICES</h1>
                     <a href="#contact-section"
                         class="button1 bg-blue-500 text-white py-2 px-4 ml-4 mt-4 rounded inline-block">Get in
                         Touch</a>
@@ -255,18 +260,27 @@
             <!-- Text Section -->
             <div class="flex flex-col justify-center my-2">
                 <h3 class="text-3xl font-semibold text-blue-500 mb-4">Who We Are</h3>
-                <p class="text-lg text-gray-600 mb-4 text-justify">A forward-thinking youth-led company, META KNIGHT MEDIA, is committed to helping conventional small businesses, organizations, and student leaders succeed in the digital era. Our goal is to close the digital divide by offering cutting-edge social media solutions, knowledgeable advice, and customized tactics to support our clients' success on the internet.<br>
+                <p class="text-lg text-gray-600 mb-4 text-justify">A forward-thinking youth-led company, META KNIGHT
+                    MEDIA, is committed to helping conventional small businesses, organizations, and student leaders
+                    succeed in the digital era. Our goal is to close the digital divide by offering cutting-edge social
+                    media solutions, knowledgeable advice, and customized tactics to support our clients' success on the
+                    internet.<br>
 
                     <!-- Success in the digital era of today depends on having a good web presence. To make a difference, student leaders and groups must develop their brands, communicate with their audience more effectively, and spread their message. Establishing a strong online presence is essential for traditional small businesses to attract new clients and compete with larger enterprises. -->
-                    </p>
+                </p>
                 <!-- <h3 class="text-3xl font-semibold text-blue-500 mb-4">Our Mission</h3>
                 <p class="text-lg text-gray-600 mb-4">Our mission is to bridge the gap between theoretical marketing
                     concepts and practical applications. We provide real-world experience to our members while
                     delivering top-notch marketing solutions to the community.</p> -->
                 <h3 class="text-3xl font-semibold text-blue-500 mb-4">What We Offer</h3>
-                <p class="text-lg text-gray-600 text-justify">Offering a wide range of services, such as social media planning, digital marketing, content production, and online reputation management, Meta Knight Media meets these needs. In order to provide tailored solutions that actually produce results, our team of professionals works closely with customers to understand their specific needs, objectives, and target audience.
+                <p class="text-lg text-gray-600 text-justify">Offering a wide range of services, such as social media
+                    planning, digital marketing, content production, and online reputation management, Meta Knight Media
+                    meets these needs. In order to provide tailored solutions that actually produce results, our team of
+                    professionals works closely with customers to understand their specific needs, objectives, and
+                    target audience.
                 </p>
-                <button class="mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 inline-block">
+                <button
+                    class="mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 inline-block">
                     <a href="about.html">Read More</a>
                 </button>
             </div>
@@ -301,7 +315,8 @@
                 <img src="images/phone.svg" alt="Performance Marketing" class="mx-auto mb-4 h-12">
                 <h5 class="font-semibold text-lg text-blue-500 transition-colors duration-300">Web Developement
                 </h5>
-                <p class="text-gray-600 mt-2 transition-colors duration-300">Build modern, responsive websites and applications tailored to your business needs.</p>
+                <p class="text-gray-600 mt-2 transition-colors duration-300">Build modern, responsive websites and
+                    applications tailored to your business needs.</p>
             </div>
 
             <!-- SEO -->
@@ -324,12 +339,14 @@
             </div>
 
             <!-- Mobile App Marketing -->
-            <div class="service-card bg-white shadow-lg p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white">
+            <div
+                class="service-card bg-white shadow-lg p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white">
                 <img src="images/phone.svg" alt="Content Creation" class="mx-auto mb-4 h-12">
                 <h5 class="font-semibold text-lg text-blue-500 transition-colors duration-300">Content Creation</h5>
-                <p class="text-gray-600 mt-2 transition-colors duration-300">Engage your audience with high-quality, creative content that drives results and enhances your brand's presence.</p>
+                <p class="text-gray-600 mt-2 transition-colors duration-300">Engage your audience with high-quality,
+                    creative content that drives results and enhances your brand's presence.</p>
             </div>
-            
+
 
             <!-- Content Marketing -->
             <div
@@ -405,7 +422,7 @@
 
 
     <!-- FAQ Section -->
-    <div class="container relative mx-auto my-16">
+    <div id="faq" class="container faq relative mx-auto my-16">
         <img src="images/dots.svg" class="absolute left-0 w-10 md:w-auto" alt="">
         <img src="images/dots.svg" class="absolute right-0 top-1/3  w-10 md:w-auto" alt="">
 
@@ -428,7 +445,10 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">A website serves as your business's digital storefront, providing a platform to showcase your products or services, connect with potential customers, and establish credibility. It allows you to reach a wider audience, provide valuable information, and ultimately drive sales and growth.</p>
+                            <p class="p-3 text-gray-900">A website serves as your business's digital storefront,
+                                providing a platform to showcase your products or services, connect with potential
+                                customers, and establish credibility. It allows you to reach a wider audience, provide
+                                valuable information, and ultimately drive sales and growth.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
@@ -445,7 +465,10 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">Your digital presence encompasses all your online activities and interactions, including your website, social media profiles, online reviews, and any other digital content associated with your business. It's how your brand is perceived and experienced in the online world.</p>
+                            <p class="p-3 text-gray-900">Your digital presence encompasses all your online activities
+                                and interactions, including your website, social media profiles, online reviews, and any
+                                other digital content associated with your business. It's how your brand is perceived
+                                and experienced in the online world.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
@@ -462,13 +485,20 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">To differentiate yourself from competitors and offer superior value, consider the following strategies:
+                            <p class="p-3 text-gray-900">To differentiate yourself from competitors and offer superior
+                                value, consider the following strategies:
 
-                                Niche Expertise: Focus on a specific area of your industry and become a recognized expert. This allows you to cater to a targeted audience with specialized knowledge and solutions.
-                                Personalized Service: Provide personalized attention and support to your customers, building strong relationships and fostering loyalty.
-                                Innovative Solutions: Continuously seek out innovative ways to improve your products or services, addressing customer needs and pain points in unique ways.
-                                Exceptional Customer Experience: Prioritize creating a seamless and positive customer experience across all touchpoints, from your website to customer service interactions.
-                                Strong Online Community: Engage with your audience through social media and online forums, building a community around your brand and fostering customer loyalty.</p>
+                                Niche Expertise: Focus on a specific area of your industry and become a recognized
+                                expert. This allows you to cater to a targeted audience with specialized knowledge and
+                                solutions.
+                                Personalized Service: Provide personalized attention and support to your customers,
+                                building strong relationships and fostering loyalty.
+                                Innovative Solutions: Continuously seek out innovative ways to improve your products or
+                                services, addressing customer needs and pain points in unique ways.
+                                Exceptional Customer Experience: Prioritize creating a seamless and positive customer
+                                experience across all touchpoints, from your website to customer service interactions.
+                                Strong Online Community: Engage with your audience through social media and online
+                                forums, building a community around your brand and fostering customer loyalty.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
@@ -485,7 +515,10 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">The timeline for building a website depends on several factors, including the complexity of the design, the amount of content, and the chosen development method. Generally, a simple website can be built in a few weeks, while more complex websites may take several months.</p>
+                            <p class="p-3 text-gray-900">The timeline for building a website depends on several factors,
+                                including the complexity of the design, the amount of content, and the chosen
+                                development method. Generally, a simple website can be built in a few weeks, while more
+                                complex websites may take several months.</p>
                         </div>
                     </li>
                     <li class="bg-white my-2 shadow-lg" x-data="{ open: false }">
@@ -502,7 +535,9 @@
                         </h2>
                         <div x-show="open" x-transition.duration.500ms style="display: none;"
                             class="border-l-2 border-blue-500 overflow-hidden">
-                            <p class="p-3 text-gray-900">To maintain a successful website, regularly update content, address technical issues, ensure security, monitor analytics, and prioritize user experience.</p>
+                            <p class="p-3 text-gray-900">To maintain a successful website, regularly update content,
+                                address technical issues, ensure security, monitor analytics, and prioritize user
+                                experience.</p>
                         </div>
                     </li>
                     <!-- Add more FAQ items as needed -->
@@ -558,7 +593,8 @@
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-32 resize-none"
                         id="message" placeholder="Your Message" required></textarea>
                     <div class="flex justify-center ">
-                        <button  class="bg-blue-500  button2  hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded mt-4"
+                        <button
+                            class="bg-blue-500  button2  hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded mt-4"
                             type="submit">
                             Send Message
                         </button>
@@ -574,12 +610,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M21 10h-6l-1 9H9l-1-9H2l1-2h18l1 2zM10 5V3a2 2 0 014 0v2" />
                     </svg>
-                    <span class="text-3xl font-bold">9033131093</span>
+                    <span class="text-3xl font-bold">+91 7300805838</span>
                 </div>
-                <p class="text-center lg:text-left">Available from 10:00 – 18:00</p>
-                <p class="mt-4 text-center lg:text-left">Ahmedabad | Surat | Vadodara</p>
-                <p class="mt-4 text-center lg:text-left">Email: <a href="mailto:info@socialee.in"
-                        class="text-orange-500 hover:underline">info@socialee.in</a></p>
+                <p class="text-center lg:text-left">Available 24 X 7</p>
+                <p class="mt-4 text-center lg:text-left">Email: <a href="mailto:
+                    metaknight618@gmail.com"
+                        class="text-orange-500 hover:underline">
+                        metaknight618@gmail.com</a></p>
             </div>
         </div>
     </div>
@@ -587,49 +624,73 @@
     <footer class="bg-blue-500 text-white py-10">
         <div
             class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 lg:px-16 space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
-
+    
             <!-- Logo and Slogan -->
             <div class="flex items-center">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="h-12 mr-4">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12 mr-4">
                 <span class="text-2xl font-bold">Ready To Talk Growth.</span>
             </div>
-
+    
             <!-- Navigation and Contact Info -->
             <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
                 <div class="flex flex-col space-y-2">
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Home</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Team</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Services</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Our Clients</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Faq</a>
-                    <a href="#" class="hover:text-gray-300 transition duration-300">Contact</a>
+                    <a href="index.html" class="hover:text-gray-300 transition duration-300">Home</a>
+                    <a href="" class="hover:text-gray-300 transition duration-300">Team</a>
+                    <a href="index.html#services-section" class="hover:text-gray-300 transition duration-300">Services</a>
+                    <a href="client.html" class="hover:text-gray-300 transition duration-300">Our Clients</a>
+                    <a href="index.html#faq" class="hover:text-gray-300 transition duration-300">Faq</a>
+                    <a href="#contact-section" class="hover:text-gray-300 transition duration-300">Contact</a>
                 </div>
                 <div class="flex flex-col space-y-2">
                     <div class="flex items-center">
                         <i class="fas fa-phone-alt mr-2"></i>
-                        <a href="tel:+4407772452848" class="hover:text-gray-300 transition duration-300">+44
-                            07772452848</a>
+                        <a href="tel:+4407772452848" class="hover:text-gray-300 transition duration-300">+91 7300805838</a>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope mr-2"></i>
-                        <a href="mailto:info@marketingagency.co"
-                            class="hover:text-gray-300 transition duration-300">info@marketingagency.co</a>
+                        <a href="mailto:metaknight618@gmail.com" class="hover:text-gray-300 transition duration-300">metaknight618@gmail.com</a>
                     </div>
                     <div class="flex space-x-4 mt-4">
-                        <a href="#" class="hover:text-gray-300 transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="hover:text-gray-300 transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="hover:text-gray-300 transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                        <a href="https://www.linkedin.com/company/metaknight-media/" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/metaknight_media?igsh=bzBtZjh5ZzZzdmR6" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("KNKTsmj3Iwq23psrY");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Create an object with the form data
+            const data = {
+                from_name: formData.get('name'),
+                from_email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                message: formData.get('message')
+            };
+
+            // Send email using EmailJS
+            emailjs.send('your_service_id', 'your_template_id', data)
+                .then(function(response) {
+                    console.log('Sent successfully', response);
+                    alert('Your message has been sent!');
+                }, function(error) {
+                    console.error('Failed to send', error);
+                    alert('Failed to send your message. Please try again.');
+                });
+        });
+    </script>
 
 
 
